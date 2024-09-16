@@ -73,6 +73,11 @@ a {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .conditioners {
   margin: 40px 0;
 }

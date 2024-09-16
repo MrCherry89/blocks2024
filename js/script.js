@@ -4,6 +4,18 @@ $(document).ready(function () {
     mainClass: "mfp-fade",
   });
 
+  $(".popup").magnificPopup({
+    type: "inline",
+    callbacks: {
+      open: function () {
+        $("body").addClass("no-scroll");
+      },
+      close: function () {
+        $("body").removeClass("no-scroll");
+      },
+    },
+  });
+
   $(".phone-number-input").inputmask({
     mask: "+7 (999)-999-999-9",
   });
