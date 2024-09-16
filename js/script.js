@@ -4,14 +4,28 @@ $(document).ready(function () {
     mainClass: "mfp-fade",
   });
 
+  var scrollTop;
+
   $(".popup").magnificPopup({
     type: "inline",
     callbacks: {
       open: function () {
-        $("body").addClass("no-scroll");
+        // Сохраняем текущее положение прокрутки
+        scrollTop = $(window).scrollTop();
+
+        // Отключаем прокрутку страницы и фиксируем положение
+        $("body").addClass("no-scroll").css({
+          top: -scrollTop,
+        });
       },
       close: function () {
-        $("body").removeClass("no-scroll");
+        // Убираем класс и восстанавливаем прокрутку
+        $("body").removeClass("no-scroll").css({
+          top: "",
+        });
+
+        // Восстанавливаем предыдущее положение прокрутки
+        $(window).scrollTop(scrollTop);
       },
     },
   });
