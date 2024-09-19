@@ -937,6 +937,9 @@
     .top-buttons {
       margin-bottom: 24px;
       overflow-x: auto;
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
       &::-webkit-scrollbar {
         width: 0;
       }
@@ -954,13 +957,14 @@
         min-width: 1160px;
         button {
           margin-right: 15px;
-          padding: 12px 22px;
+          padding: 10px 22px;
           border-radius: 100px;
           border: 2px solid rgba(113, 113, 113, 0.4);
           min-width: 100px;
           font-size: 16px;
           font-weight: 600;
           color: #717171;
+          height: 48px;
           &.active {
             border-color: #67a4c8;
             color: #67a4c8;
@@ -984,6 +988,7 @@
         color: #717171;
         @include flex;
         @include align-center;
+        height: 48px;
         border-radius: 100px;
         &:hover {
           border-color: #bb1e25;
@@ -991,6 +996,7 @@
         }
         img {
           margin-right: 10px;
+          width: 30px;
         }
       }
     }
@@ -998,16 +1004,30 @@
 }
 
 .cleaning {
+  margin-bottom: 50px;
   .wrapper {
+    @include flex;
+    @include justify-between;
+    .sidebar {
+      width: calc(25% - 10px);
+      background: #333;
+      border-radius: 20px;
+      padding: 30px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
     .cleaning-slider-wrap {
       position: relative;
       padding: 30px;
       background: #ecf8e9;
       border-radius: 20px;
       padding-right: 0;
+      width: calc(75% - 10px);
       @media (max-width: 767px) {
         padding: 30px 20px;
         padding-right: 0;
+        width: 100%;
       }
       .top {
         @include flex;
