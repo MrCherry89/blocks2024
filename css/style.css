@@ -357,6 +357,9 @@ a {
     width: calc((100% - 32px) / 2);
   }
 }
+.work .work-items .work-item:nth-child(2) .icon-wrap img {
+  margin-left: auto;
+}
 .work .work-items .work-item .text {
   text-align: center;
   font-size: 16px;
@@ -395,6 +398,7 @@ a {
 }
 .work .work-items .work-item .icon-wrap img {
   margin-top: auto;
+  width: 100%;
 }
 @media (max-width: 590px) {
   .work .work-items .work-item .icon-wrap img {

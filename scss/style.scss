@@ -202,6 +202,13 @@
         margin: 0 8px 20px;
         width: calc((100% - 32px) / 2);
       }
+      &:nth-child(2) {
+        .icon-wrap {
+          img {
+            margin-left: auto;
+          }
+        }
+      }
       .text {
         text-align: center;
         font-size: 16px;
@@ -229,6 +236,7 @@
         }
         img {
           margin-top: auto;
+          width: 100%;
           @media (max-width: 590px) {
             width: 100%;
           }
